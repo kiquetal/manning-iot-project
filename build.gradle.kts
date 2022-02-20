@@ -35,6 +35,8 @@ dependencies {
   implementation("io.vertx:vertx-mqtt")
   implementation(kotlin("stdlib-jdk8"))
   testImplementation("io.vertx:vertx-junit5")
+  implementation("io.vertx:vertx-circuit-breaker:4.2.5")
+
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
 
