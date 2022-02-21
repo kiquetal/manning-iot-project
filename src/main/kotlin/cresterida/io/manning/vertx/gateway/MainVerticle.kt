@@ -8,6 +8,8 @@ class MainVerticle : AbstractVerticle() {
 
   override fun start(startPromise: Promise<Void>) {
 
+
+
   }
   override fun stop(stopPromise: Promise<Void>) {
     stopPromise.complete()

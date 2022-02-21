@@ -1,4 +1,7 @@
 package cresterida.io.manning.vertx.discover
 
-object DiscoverManager {
+import io.vertx.ext.web.Router
+
+class DiscoverManager{
+
 }
