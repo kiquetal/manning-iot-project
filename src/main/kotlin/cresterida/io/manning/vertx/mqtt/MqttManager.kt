@@ -23,7 +23,6 @@ object MqttManager {
 
 
   fun startAndConnectMqttClient(vert: Vertx): Future<MqttConnAckMessage> {
-
     val mqttClient = Optional.ofNullable(System.getenv().getValue("MQTT_CLIENT_ID")).orElse("gateway")
     val mqqtPort = Integer.parseInt(Optional.ofNullable(System.getenv().getValue("MQQT_PORT")).orElse("1883"))
     val mqqtHost = Optional.ofNullable(System.getenv().getValue("MQQT_HOST")).orElse(("mqqt.home.smart"))
