@@ -1,0 +1,4 @@
+/home/kiquetal/Documents/codes/2k22/manning-iot-project/src/main/kotlin/cresterida/io/manning/vertx/gateway/MainVerticle.kt
+/home/kiquetal/Documents/codes/2k22/manning-iot-project/src/main/kotlin/cresterida/io/manning/vertx/discover/DiscoverManager.kt
+/home/kiquetal/Documents/codes/2k22/manning-iot-project/src/main/kotlin/cresterida/io/manning/vertx/mqtt/MqttManager.kt
+/home/kiquetal/Documents/codes/2k22/manning-iot-project/src/main/kotlin/cresterida/io/manning/vertx/http/Registration.kt
