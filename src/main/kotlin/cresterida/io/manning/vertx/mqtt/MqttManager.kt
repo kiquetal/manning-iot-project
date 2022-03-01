@@ -29,11 +29,10 @@ object MqttManager {
 
     return getBreaker(vert).execute{
       promise -> {
-        mqttClient = TODO()
+
     }
     }
 
 
-  return Promise.promise<MqttConnAckMessage>().future()
   }
 }
