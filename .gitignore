@@ -94,7 +94,7 @@ cmake-buildTool-debug/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
+build/
 # Cursive Clojure plugin
 .idea/replstate.xml
 
