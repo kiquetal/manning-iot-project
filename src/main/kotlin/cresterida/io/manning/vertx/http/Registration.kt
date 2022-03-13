@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture
 
   fun Route.proccessServer() {
     handler { ctx: RoutingContext ->
-      ctx.response().end("hola")
+      ctx.response().end(ctx.body)
     }
   }
 

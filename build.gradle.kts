@@ -18,7 +18,7 @@ repositories {
 val vertxVersion = "4.2.5"
 val junitJupiterVersion = "5.7.0"
 
-val mainVerticleName = "cresterida.io.manning.vertx.MainVerticle"
+val mainVerticleName = "cresterida.io.manning.vertx.gateway.MainVerticle"
 val launcherClassName = "io.vertx.core.Launcher"
 
 val watchForChange = "src/**/*"
