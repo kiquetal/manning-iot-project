@@ -6,7 +6,16 @@ import io.vertx.core.Promise
 class MainVerticle : AbstractVerticle() {
 
 
+  companion object {
+    @JvmStatic
+    fun main(s:Array<String>)
+    {
+     println("")
+    }
+  }
+
   override fun start(startPromise: Promise<Void>) {
+
 
 
 
@@ -14,4 +23,7 @@ class MainVerticle : AbstractVerticle() {
   override fun stop(stopPromise: Promise<Void>) {
     stopPromise.complete()
   }
+
+
+
 }

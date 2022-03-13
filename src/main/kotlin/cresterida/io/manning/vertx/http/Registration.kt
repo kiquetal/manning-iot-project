@@ -1,5 +1,9 @@
 package cresterida.io.manning.vertx.http
 
+import io.vertx.core.Future
+import io.vertx.core.Promise
+import java.util.concurrent.CompletableFuture
+
 open class Registration {
 
 
@@ -9,6 +13,12 @@ open class Registration {
     {
       println("let test it")
 
+
+
+    }
+    fun obtainFuture(): CompletableFuture<String> {
+
+      return CompletableFuture.completedFuture("kiquetal")
     }
   }
 
