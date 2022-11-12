@@ -1,15 +1,10 @@
 package cresterida.io.manning.vertx.http
 
-import io.vertx.core.Future
-import io.vertx.core.Handler
-import io.vertx.core.Promise
-import io.vertx.core.Vertx
-import io.vertx.core.http.HttpMethod
-import io.vertx.core.json.Json
+
 import io.vertx.ext.web.Route
-import io.vertx.ext.web.Router
 import io.vertx.ext.web.RoutingContext
-import io.vertx.kotlin.core.json.json
+import io.vertx.ext.web.handler.BodyHandler
+import io.vertx.kotlin.core.json.get
 import io.vertx.kotlin.core.json.jsonObjectOf
 import java.util.concurrent.CompletableFuture
 
@@ -25,9 +20,14 @@ import java.util.concurrent.CompletableFuture
 
 
   fun Route.proccessServer() {
+    handler(BodyHandler.create())
     handler { ctx: RoutingContext ->
-      println("recibido")
-      val obj = json { jsonObjectOf("name" to "kiquetal-soy yo") }
+      val myBody = ctx.bodyAsJson
+      val allqueries = ctx.request().params()
+      val name:String = myBody["some"]
+      println(name)
+      println("params[${allqueries}]")
+      val obj =  jsonObjectOf("name" to "kiquetal-soy yo")
       ctx.response().putHeader("Content-type","application/json")
       ctx.response().end(obj.encode())
     }
@@ -35,6 +35,9 @@ import java.util.concurrent.CompletableFuture
 
   }
 
+  fun Route.processRegistration() {
 
+
+  }
 
 

@@ -48,18 +48,22 @@ class MqttManager {
       try {
         mqttClient = MqttClient.create(vert)
         mqttClient.connect(mqqtPort, mqqtHost)
-          .onSuccess { v.complete(MqttConnAckMessage.create(MqttConnectReturnCode.CONNECTION_ACCEPTED,false))
-        }.onFailure { v.fail(it) }
+          .onSuccess {
+             v.complete(MqttConnAckMessage.create(MqttConnectReturnCode.CONNECTION_ACCEPTED,false))
+        }.onFailure {
+            println("here error")
+            v.fail(it) }
 
       } catch (e: Exception) {
         println(e.message)
         v.fail(e.cause)
       }
+
     }
   }
   fun sendMessage(message:String)  {
 
-  
+
 
 
   }
